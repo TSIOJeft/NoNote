@@ -1,4 +1,8 @@
-const vditor = new Vditor("vditor", { preview: { maxWidth: 800 }, width: 800 });
+const vditor = new Vditor("vditor", {
+    preview: { maxWidth: '900' }, width: '100%', after() {
+        window.chrome.webview.postMessage({ 'event': 0});
+    }
+});
 // var fs = require('fs');
 // fs.writeFile("/tmp/test.txt", "Hey there!", function (err) {
 //     if (err) {
@@ -14,7 +18,18 @@ const vditor = new Vditor("vditor", { preview: { maxWidth: 800 }, width: 800 });
 //             vditor.setValue(data, (clearStack = false));
 //         });
 // }
-//获取编辑器内容
+
+function getFile(filePath) {
+    fetch(filePath)
+        .then((response) => response.text())
+        .then((data) => {
+            ameSetValue(data);
+            alert(vditor.getValue())
+        });
+}
+function getEditorValue() {
+    return vditor.getValue();
+}
 ameGetValue = () => {
     return vditor.getValue();
 };
@@ -58,6 +73,7 @@ ameGetSelection = () => {
 
 //设置编辑器内容
 ameSetValue = (value) => {
+   
     vditor.setValue(value, clearStack = false);
 };
 

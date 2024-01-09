@@ -1,9 +1,10 @@
 const fs = require('browserify-fs');
 function getFile(filePath) {
- 
-            fs.readFile('/home/hello-world.txt', 'utf-8', function(err, data) {
-                console.log(data);
-            });
+    fetch(filePath)
+        .then((response) => response.text())
+        .then((data) => {
+            vditor.setValue(data, (clearStack = false));
+        });
 }
 function saveFile(filePath, text) {
 

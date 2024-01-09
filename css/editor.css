@@ -27,15 +27,12 @@ body {
 } */
 .toolbar {
     height: 42px;
-    width: 800px;
+    width: 100%;
     align-self: center;
     align-items: center;
     align-content: center;
     display: flex;
     flex-direction: row;
-    border-radius: 4px;
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
     background: linear-gradient(#757575, #616161);
 }
 

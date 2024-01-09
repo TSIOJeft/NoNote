@@ -11,10 +11,10 @@
 <!-- <script src="./js/fileutil.js"></script> -->
 
 </meta>
-
-<body style="flex-direction: column;">
+<body style="flex-direction: column; background-color: transparent;margin: 0;">
     <div class="toolbar">
         <div class="borderButton">N</div>
+
     </div>
     <div id="vditor"></div>
     <!-- <button onclick="ameSetPreviewMode('both');" >both</button>
@@ -25,14 +25,14 @@
 
 
     <script type="text/javascript" src="./js/editor.js"></script>
-
-</body>
-
-<body>
-    <script src="bundle.js"></script>
     <script>
-        fileutil.getFile('test.md')
-        fileutil.saveFile('/home/hello-world.txt', '111')
+        // getFile('http://127.0.0.1:9091/note/hello.md')
+        setInterval(() => {
+            window.chrome.webview.postMessage({ 'event': 1, 'mes': ameGetValue() });
+        }, 60 * 1000);
+        // alert(getEditorValue())
+        // setEditorValue("1");
+
     </script>
 </body>
 
