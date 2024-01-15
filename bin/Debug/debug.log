@@ -1,0 +1,73 @@
+[0108/143157.903:WARNING:resource_util.cc(94)] Please customize CefSettings.root_cache_path for your application. Use of the default value may lead to unintended process singleton behavior.
+[0108/143158.001:INFO:component_installer.cc(297)] Failed to verify installation for Widevine Content Decryption Module (C:\Users\FarPlace\AppData\Local\CEF\User Data\WidevineCdm\4.10.2710.0).: ϵͳ�Ҳ���ָ����·���� (0x3)
+[0108/143214.162:WARNING:resource_util.cc(94)] Please customize CefSettings.root_cache_path for your application. Use of the default value may lead to unintended process singleton behavior.
+[0108/143214.216:INFO:component_installer.cc(297)] Failed to verify installation for Widevine Content Decryption Module (C:\Users\FarPlace\AppData\Local\CEF\User Data\WidevineCdm\4.10.2710.0).: ϵͳ�Ҳ���ָ����·���� (0x3)
+[0108/143214.862:INFO:CONSOLE(317)] "这是一个最好的时代，
+科技的发展给予了每个人创造价值的可能性；
+这也是一个最充满想象的时代，
+每一位心怀梦想的人，终会奔向星辰大海。
+百度与你们一起仰望星辰大海，携手共筑未来！
+", source: https://pss.bdstatic.com/r/www/cache/static/protocol/https/global/js/all_async_search_93737f2.js (317)
+[0108/143214.868:INFO:CONSOLE(317)] "%c百度2023校园招聘简历投递：https://talent.baidu.com/jobs/list color:red", source: https://pss.bdstatic.com/r/www/cache/static/protocol/https/global/js/all_async_search_93737f2.js (317)
+[0108/143214.921:ERROR:ssl_client_socket_impl.cc(975)] handshake failed; returned -1, SSL error code 1, net_error -107
+[0108/143214.922:ERROR:ssl_client_socket_impl.cc(975)] handshake failed; returned -1, SSL error code 1, net_error -107
+[0108/143214.924:ERROR:ssl_client_socket_impl.cc(975)] handshake failed; returned -1, SSL error code 1, net_error -107
+[0108/143214.924:ERROR:ssl_client_socket_impl.cc(975)] handshake failed; returned -1, SSL error code 1, net_error -107
+[0108/143214.938:ERROR:ssl_client_socket_impl.cc(975)] handshake failed; returned -1, SSL error code 1, net_error -107
+[0108/143214.940:ERROR:ssl_client_socket_impl.cc(975)] handshake failed; returned -1, SSL error code 1, net_error -107
+[0108/143215.399:ERROR:ssl_client_socket_impl.cc(975)] handshake failed; returned -1, SSL error code 1, net_error -107
+[0108/143215.400:ERROR:ssl_client_socket_impl.cc(975)] handshake failed; returned -1, SSL error code 1, net_error -107
+[0108/143215.402:ERROR:ssl_client_socket_impl.cc(975)] handshake failed; returned -1, SSL error code 1, net_error -107
+[0108/143215.403:ERROR:ssl_client_socket_impl.cc(975)] handshake failed; returned -1, SSL error code 1, net_error -107
+[0108/143647.096:WARNING:resource_util.cc(94)] Please customize CefSettings.root_cache_path for your application. Use of the default value may lead to unintended process singleton behavior.
+[0108/143647.153:INFO:component_installer.cc(297)] Failed to verify installation for Widevine Content Decryption Module (C:\Users\FarPlace\AppData\Local\CEF\User Data\WidevineCdm\4.10.2710.0).: ϵͳ�Ҳ���ָ����·���� (0x3)
+[0108/143647.821:INFO:CONSOLE(317)] "这是一个最好的时代，
+科技的发展给予了每个人创造价值的可能性；
+这也是一个最充满想象的时代，
+每一位心怀梦想的人，终会奔向星辰大海。
+百度与你们一起仰望星辰大海，携手共筑未来！
+", source: https://pss.bdstatic.com/r/www/cache/static/protocol/https/global/js/all_async_search_93737f2.js (317)
+[0108/143647.822:INFO:CONSOLE(317)] "%c百度2023校园招聘简历投递：https://talent.baidu.com/jobs/list color:red", source: https://pss.bdstatic.com/r/www/cache/static/protocol/https/global/js/all_async_search_93737f2.js (317)
+[0108/143647.859:ERROR:ssl_client_socket_impl.cc(975)] handshake failed; returned -1, SSL error code 1, net_error -107
+[0108/143647.859:ERROR:ssl_client_socket_impl.cc(975)] handshake failed; returned -1, SSL error code 1, net_error -107
+[0108/143647.861:ERROR:ssl_client_socket_impl.cc(975)] handshake failed; returned -1, SSL error code 1, net_error -107
+[0108/143647.862:ERROR:ssl_client_socket_impl.cc(975)] handshake failed; returned -1, SSL error code 1, net_error -107
+[0108/143647.872:ERROR:ssl_client_socket_impl.cc(975)] handshake failed; returned -1, SSL error code 1, net_error -107
+[0108/143647.873:ERROR:ssl_client_socket_impl.cc(975)] handshake failed; returned -1, SSL error code 1, net_error -107
+[0108/143648.140:ERROR:ssl_client_socket_impl.cc(975)] handshake failed; returned -1, SSL error code 1, net_error -107
+[0108/143648.141:ERROR:ssl_client_socket_impl.cc(975)] handshake failed; returned -1, SSL error code 1, net_error -107
+[0108/143648.143:ERROR:ssl_client_socket_impl.cc(975)] handshake failed; returned -1, SSL error code 1, net_error -107
+[0108/143648.143:ERROR:ssl_client_socket_impl.cc(975)] handshake failed; returned -1, SSL error code 1, net_error -107
+[0108/143825.669:WARNING:resource_util.cc(94)] Please customize CefSettings.root_cache_path for your application. Use of the default value may lead to unintended process singleton behavior.
+[0108/143825.728:INFO:component_installer.cc(297)] Failed to verify installation for Widevine Content Decryption Module (C:\Users\FarPlace\AppData\Local\CEF\User Data\WidevineCdm\4.10.2710.0).: ϵͳ�Ҳ���ָ����·���� (0x3)
+[0108/143847.110:WARNING:resource_util.cc(94)] Please customize CefSettings.root_cache_path for your application. Use of the default value may lead to unintended process singleton behavior.
+[0108/143847.163:INFO:component_installer.cc(297)] Failed to verify installation for Widevine Content Decryption Module (C:\Users\FarPlace\AppData\Local\CEF\User Data\WidevineCdm\4.10.2710.0).: ϵͳ�Ҳ���ָ����·���� (0x3)
+[0108/143847.815:INFO:CONSOLE(317)] "这是一个最好的时代，
+科技的发展给予了每个人创造价值的可能性；
+这也是一个最充满想象的时代，
+每一位心怀梦想的人，终会奔向星辰大海。
+百度与你们一起仰望星辰大海，携手共筑未来！
+", source: https://pss.bdstatic.com/r/www/cache/static/protocol/https/global/js/all_async_search_93737f2.js (317)
+[0108/143847.816:INFO:CONSOLE(317)] "%c百度2023校园招聘简历投递：https://talent.baidu.com/jobs/list color:red", source: https://pss.bdstatic.com/r/www/cache/static/protocol/https/global/js/all_async_search_93737f2.js (317)
+[0108/143847.854:ERROR:ssl_client_socket_impl.cc(975)] handshake failed; returned -1, SSL error code 1, net_error -107
+[0108/143847.856:ERROR:ssl_client_socket_impl.cc(975)] handshake failed; returned -1, SSL error code 1, net_error -107
+[0108/143847.857:ERROR:ssl_client_socket_impl.cc(975)] handshake failed; returned -1, SSL error code 1, net_error -107
+[0108/143847.858:ERROR:ssl_client_socket_impl.cc(975)] handshake failed; returned -1, SSL error code 1, net_error -107
+[0108/143847.869:ERROR:ssl_client_socket_impl.cc(975)] handshake failed; returned -1, SSL error code 1, net_error -107
+[0108/143847.870:ERROR:ssl_client_socket_impl.cc(975)] handshake failed; returned -1, SSL error code 1, net_error -107
+[0108/143848.250:ERROR:ssl_client_socket_impl.cc(975)] handshake failed; returned -1, SSL error code 1, net_error -107
+[0108/143848.252:ERROR:ssl_client_socket_impl.cc(975)] handshake failed; returned -1, SSL error code 1, net_error -107
+[0108/143848.253:ERROR:ssl_client_socket_impl.cc(975)] handshake failed; returned -1, SSL error code 1, net_error -107
+[0108/143848.254:ERROR:ssl_client_socket_impl.cc(975)] handshake failed; returned -1, SSL error code 1, net_error -107
+[0108/143858.136:WARNING:resource_util.cc(94)] Please customize CefSettings.root_cache_path for your application. Use of the default value may lead to unintended process singleton behavior.
+[0108/143858.194:INFO:component_installer.cc(297)] Failed to verify installation for Widevine Content Decryption Module (C:\Users\FarPlace\AppData\Local\CEF\User Data\WidevineCdm\4.10.2710.0).: ϵͳ�Ҳ���ָ����·���� (0x3)
+[0108/143900.355:INFO:CONSOLE(393)] "Permissions policy violation: unload is not allowed in this document.", source: https://www.google.com/xjs/_/js/k=xjs.hd.en.0pdvYIPelQo.O/am=AAAAAAAAAAAAAAAAAAAAAAAgAAAAAACCfsIhgA0QABAAAAwQAAQAEKCCKAQ4ABAIeCgTAACACRAYArMAUoF3CgAATKIKAAAAAAAAwUAUQOABAQAA6AAAAAhoBGgAQkAJCAAAAEAeAAQHAIMIAgAAAAAAAAAAABDABMHgggRAQQABAAAAAAAAAAAAgJQ0uRhI/d=1/ed=1/dg=2/br=1/rs=ACT90oFSYakMSnDx8I5f-5IbAeYNVpYzbA/ee=cEt90b:ws9Tlc;qddgKe:x4FYXe,d7YSfd;yxTchf:KUM7Z;dtl0hd:lLQWFe;eHDfl:ofjVkb;qaS3gd:yiLg6e;nAFL3:NTMZac,s39S4;oGtAuc:sOXFj;iFQyKf:vfuNJf,QIhFr;SNUn3:ZwDk9d,x8cHvb;io8t5d:sgY6Zb;Oj465e:KG2eXe,KG2eXe;Erl4fe:FloWmf,FloWmf;JsbNhc:Xd8iUd;sP4Vbe:VwDzFe;kMFpHd:OTA3Ae;uY49fb:COQbmf;Pjplud:PoEs9b,EEDORb;QGR0gd:Mlhmy;a56pNe:JEfCwb;Me32dd:MEeYgc;wR5FRb:TtcOte,O1Gjze;pXdRYb:JKoKVe;dIoSBb:ZgGg9b;EmZ2Bf:zr1jrb;NSEoX:lazG7b;eBAeSb:Ck63tb;WCEKNd:I46Hvd;wV5Pjc:L8KGxe;EVNhjf:pw70Gc;sTsDMc:kHVSUb;wQlYve:aLUfP;zOsCQe:Ko78Df;KcokUb:KiuZBf;kbAm9d:MkHyGd;g8nkx:U4MzKc;YV5bee:IvPZ6d;pNsl2d:j9Yuyc;EnlcNd:WeHg4;BjwMce:cXX2Wb;KpRAue:Tia57b;jY0zg:Q6tNgc;aZ61od:arTwJ;yGxLoc:FmAr0c;vfVwPd:lcrkwe;NPKaK:SdcwHb;LBgRLc:XVMNvd,SdcwHb;UyG7Kb:wQd0G;LsNahb:ucGLNb;w9w86d:dt4g2b;coJ8e:KvoW8;oSUNyd:fTfGO,fTfGO,pnvXVc;SMDL4c:fTfGO,pnvXVc;lzgfYb:PI40bd;qZx2Fc:j0xrE;IoGlCf:b5lhvb;w4rSdf:XKiZ9;h3MYod:cEt90b;eO3lse:nFClrf;zaIgPb:Qtpxbd;HMDDWe:G8QUdb;ShpF6e:N0pvGc;k2Qxcb:XY51pe;IBADCc:RYquRb;pKJiXd:VCenhc;rQSrae:C6D5Fc;kCQyJ:ueyPK;EABSZ:MXZt9d;qavrXe:zQzcXe;TxfV6d:YORN0b;UDrY1c:eps46d;F9mqte:UoRcbe;GleZL:J1A7Od;Nyt6ic:jn2sGd;JXS8fb:Qj0suc;w3bZCb:ZPGaIb;VGRfx:VFqbr;G0KhTb:LIaoZ;XUezZ:sa7lqb;aAJE9c:WHW6Ef;V2HTTe:RolTY;Wfmdue:g3MJlb;imqimf:jKGL2e;BgS6mb:fidj5d;gtVSi:ekUOYd;KQzWid:ZMKkN;UVmjEd:EesRsb;z97YGf:oug9te;AfeaP:TkrAjf;eBZ5Nd:audvde;CxXAWb:YyRLvc;VN6jIc:ddQyuf;OgagBe:cNTe0;SLtqO:Kh1xYe;tosKvd:ZCqP3;VOcgDe:YquhTb;uuQkY:u2V3ud;WDGyFe:jcVOxd;trZL0b:qY8PFe;VxQ32b:k0XsBb;DULqB:RKfG5c;Np8Qkd:Dpx6qc;bcPXSc:gSZLJb;cFTWae:gT8qnd;gaub4:TN6bMe;xBbsrc:NEW1Qc;DpcR3d:zL72xf;hjRo6e:F62sG;pj82le:mg5CW;dLlj2:Qqt3Gf;oUlnpc:RagDlc;Q1Ow7b:x5CSu;bFZ6gf:RsDQqe;ESrPQc:mNTJvc;R9Ulx:CR7Ufe;KOxcK:bFOvTc;G6wU6e:hezEbd;VsAqSb:PGf2Re;okUaUd:wItadb;ZWEUA:afR4Cf;U96pRd:FsR04;heHB1:sFczq;Fmv9Nc:O1Tzwc;hK67qb:QWEO5b;BMxAGc:E5bFse;R4IIIb:QWfeKf;whEZac:F4AmNb;tH4IIe:Ymry6;lkq0A:JyBE3e;daB6be:lMxGPd;LEikZe:byfTOb,lsjVmc/m=cdos,hsm,jsa,mb4ZUb,d,csi,cEt90b,SNUn3,qddgKe,sTsDMc,dtl0hd,eHDfl (393)
+[0108/143901.074:ERROR:ssl_client_socket_impl.cc(975)] handshake failed; returned -1, SSL error code 1, net_error -107
+[0108/143901.076:ERROR:ssl_client_socket_impl.cc(975)] handshake failed; returned -1, SSL error code 1, net_error -107
+[0108/144021.479:WARNING:frame_impl.cc(420)] SendProcessMessage sent to detached frame 25769803780 [6,4] will be ignored
+[0108/144115.066:WARNING:resource_util.cc(94)] Please customize CefSettings.root_cache_path for your application. Use of the default value may lead to unintended process singleton behavior.
+[0108/144115.182:INFO:component_installer.cc(297)] Failed to verify installation for Widevine Content Decryption Module (C:\Users\FarPlace\AppData\Local\CEF\User Data\WidevineCdm\4.10.2710.0).: ϵͳ�Ҳ���ָ����·���� (0x3)
+[0108/144117.823:INFO:CONSOLE(393)] "Permissions policy violation: unload is not allowed in this document.", source: https://www.google.com/xjs/_/js/k=xjs.hd.en.0pdvYIPelQo.O/am=AAAAAAAAAAAAAAAAAAAAAAAgAAAAAACCfsIhgA0QABAAAAwQAAQAEKCCKAQ4ABAIeCgTAACACRAYArsCUoF3CgAATKAKAAAAAAAAwUAUQOABAQAA6AAAAAhoBGgAQkAJCAAAAEAeAAQHAIMIAgAAAAAAAAAAABDABMHgggRAQQABAAAAAAAAAAAAgJQ0uRhI/d=1/ed=1/dg=2/br=1/rs=ACT90oGvM1BdqLjZrSKncOIwD9ubrTdEuw/ee=cEt90b:ws9Tlc;qddgKe:x4FYXe,d7YSfd;yxTchf:KUM7Z;dtl0hd:lLQWFe;eHDfl:ofjVkb;qaS3gd:yiLg6e;nAFL3:NTMZac,s39S4;oGtAuc:sOXFj;iFQyKf:vfuNJf,QIhFr;SNUn3:ZwDk9d,x8cHvb;io8t5d:sgY6Zb;Oj465e:KG2eXe,KG2eXe;Erl4fe:FloWmf,FloWmf;JsbNhc:Xd8iUd;sP4Vbe:VwDzFe;kMFpHd:OTA3Ae;uY49fb:COQbmf;Pjplud:PoEs9b,EEDORb;QGR0gd:Mlhmy;a56pNe:JEfCwb;Me32dd:MEeYgc;wR5FRb:TtcOte,O1Gjze;pXdRYb:JKoKVe;dIoSBb:ZgGg9b;EmZ2Bf:zr1jrb;NSEoX:lazG7b;eBAeSb:Ck63tb;WCEKNd:I46Hvd;wV5Pjc:L8KGxe;EVNhjf:pw70Gc;sTsDMc:kHVSUb;wQlYve:aLUfP;zOsCQe:Ko78Df;KcokUb:KiuZBf;kbAm9d:MkHyGd;g8nkx:U4MzKc;YV5bee:IvPZ6d;pNsl2d:j9Yuyc;EnlcNd:WeHg4;BjwMce:cXX2Wb;KpRAue:Tia57b;jY0zg:Q6tNgc;aZ61od:arTwJ;yGxLoc:FmAr0c;vfVwPd:lcrkwe;NPKaK:SdcwHb;LBgRLc:XVMNvd,SdcwHb;UyG7Kb:wQd0G;LsNahb:ucGLNb;w9w86d:dt4g2b;coJ8e:KvoW8;oSUNyd:fTfGO,fTfGO,pnvXVc;SMDL4c:fTfGO,pnvXVc;lzgfYb:PI40bd;qZx2Fc:j0xrE;IoGlCf:b5lhvb;w4rSdf:XKiZ9;h3MYod:cEt90b;eO3lse:nFClrf;zaIgPb:Qtpxbd;HMDDWe:G8QUdb;ShpF6e:N0pvGc;k2Qxcb:XY51pe;IBADCc:RYquRb;pKJiXd:VCenhc;rQSrae:C6D5Fc;kCQyJ:ueyPK;EABSZ:MXZt9d;qavrXe:zQzcXe;TxfV6d:YORN0b;UDrY1c:eps46d;F9mqte:UoRcbe;GleZL:J1A7Od;Nyt6ic:jn2sGd;JXS8fb:Qj0suc;w3bZCb:ZPGaIb;VGRfx:VFqbr;G0KhTb:LIaoZ;XUezZ:sa7lqb;aAJE9c:WHW6Ef;V2HTTe:RolTY;Wfmdue:g3MJlb;imqimf:jKGL2e;BgS6mb:fidj5d;gtVSi:ekUOYd;KQzWid:ZMKkN;UVmjEd:EesRsb;z97YGf:oug9te;AfeaP:TkrAjf;eBZ5Nd:audvde;CxXAWb:YyRLvc;VN6jIc:ddQyuf;OgagBe:cNTe0;SLtqO:Kh1xYe;tosKvd:ZCqP3;VOcgDe:YquhTb;uuQkY:u2V3ud;WDGyFe:jcVOxd;trZL0b:qY8PFe;VxQ32b:k0XsBb;DULqB:RKfG5c;Np8Qkd:Dpx6qc;bcPXSc:gSZLJb;cFTWae:gT8qnd;gaub4:TN6bMe;xBbsrc:NEW1Qc;DpcR3d:zL72xf;hjRo6e:F62sG;pj82le:mg5CW;dLlj2:Qqt3Gf;oUlnpc:RagDlc;Q1Ow7b:x5CSu;bFZ6gf:RsDQqe;ESrPQc:mNTJvc;R9Ulx:CR7Ufe;KOxcK:bFOvTc;G6wU6e:hezEbd;VsAqSb:PGf2Re;okUaUd:wItadb;ZWEUA:afR4Cf;U96pRd:FsR04;heHB1:sFczq;Fmv9Nc:O1Tzwc;hK67qb:QWEO5b;BMxAGc:E5bFse;R4IIIb:QWfeKf;whEZac:F4AmNb;tH4IIe:Ymry6;lkq0A:JyBE3e;daB6be:lMxGPd;LEikZe:byfTOb,lsjVmc/m=cdos,hsm,jsa,mb4ZUb,d,csi,cEt90b,SNUn3,qddgKe,sTsDMc,dtl0hd,eHDfl (393)
+[0108/144118.758:ERROR:ssl_client_socket_impl.cc(975)] handshake failed; returned -1, SSL error code 1, net_error -107
+[0108/144118.760:ERROR:ssl_client_socket_impl.cc(975)] handshake failed; returned -1, SSL error code 1, net_error -107
+[0108/144125.028:WARNING:frame_impl.cc(420)] SendProcessMessage sent to detached frame 25769803780 [6,4] will be ignored

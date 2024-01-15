@@ -1,0 +1,144 @@
+﻿<Application x:Class="NoNote.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:NoNote"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <Style x:Key="GradientBorderStyle" TargetType="Border">
+            <Setter Property="Background">
+                <Setter.Value>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                        <GradientStop Color="#757575" Offset="0.0" />
+                        <GradientStop Color="#616161" Offset="1.0" />
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+
+        </Style>
+        <Style x:Key="ButtonBackGroundStyle" TargetType="Border">
+            <Setter Property="Background">
+                <Setter.Value>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                        <GradientStop Color="#757575" Offset="0.0" />
+                        <GradientStop Color="#424242" Offset="1.0" />
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background">
+                        <Setter.Value>
+                            <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                                <GradientStop Color="#424242" Offset="0.0" />
+                                <GradientStop Color="#757575" Offset="1.0" />
+                            </LinearGradientBrush>
+                        </Setter.Value>
+                    </Setter>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <Style x:Key="ButtonBackGroundStyleVerse" TargetType="Border">
+            <Setter Property="Background">
+                <Setter.Value>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                        <GradientStop Color="#757575" Offset="0.0" />
+                        <GradientStop Color="#424242" Offset="1.0" />
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+
+        </Style>
+        <Style x:Key="GradientButtonStyle" TargetType="Button">
+            <Setter Property="VerticalAlignment">
+                <Setter.Value>Center</Setter.Value>
+            </Setter>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Width="20" Height="20" Name="innerBorder"
+                                Style="{StaticResource ButtonBackGroundStyle}" CornerRadius="4" BorderBrush="#212121"
+                                BorderThickness="0.5">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"
+                                              Margin="6 4 6 4" />
+
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+
+
+        </Style>
+
+
+        <Style x:Key="commonButton" TargetType="Button">
+            <Setter Property="Background" Value="Transparent" />
+            <Setter Property="Foreground" Value="#ffffff" />
+            <Setter Property="Height" Value="32" />
+            <Setter Property="FontSize" Value="10" />
+            <Setter Property="FontWeight" Value="Normal" />
+            <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+            <Setter Property="Tag" Value="collapse" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" CornerRadius="4">
+                            <ContentPresenter HorizontalAlignment="Stretch" VerticalAlignment="Center"
+                                              Margin="4 4 4 4" />
+                        </Border>
+
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#616161" />
+                    <Setter Property="Foreground" Value="White" />
+                    <Setter Property="Tag" Value="Visible" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <Style x:Key="titleOpacity">
+            <Setter Property="Control.Opacity" Value="0.8"></Setter>
+            <Style.Triggers>
+                <Trigger Property="Control.IsMouseOver" Value="True">
+                    <Setter Property="Control.Opacity" Value="1"></Setter>
+                </Trigger>
+            </Style.Triggers>
+
+        </Style>
+
+        <Style TargetType="{x:Type ContextMenu}">
+            <Setter Property="OverridesDefaultStyle" Value="True" />
+            <Setter Property="SnapsToDevicePixels" Value="True" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type ContextMenu}">
+                        <Border BorderThickness="0.5" CornerRadius="4" x:Name="Border" Background="#fafafa">
+                            <StackPanel ClipToBounds="True" Orientation="Vertical" IsItemsHost="True" />
+                          
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style TargetType="MenuItem">
+            <Setter Property="OverridesDefaultStyle" Value="True"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type MenuItem}">
+                        <Border Margin="0 4 0 4" x:Name="Border" Background="{TemplateBinding Background}" Width="220">
+                            
+                            <TextBlock Text="{TemplateBinding Header }" Margin="16 8 8 8" Foreground="#616161"></TextBlock>
+                            
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="Border" Property="Background" Value="#eeeeee"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Application.Resources>
+</Application>

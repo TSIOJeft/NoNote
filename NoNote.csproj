@@ -1,0 +1,248 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+    <PropertyGroup>
+        <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+        <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+        <ProjectGuid>{4A896CAA-50AE-41E1-B227-8F6F4C2ABC0D}</ProjectGuid>
+        <OutputType>Exe</OutputType>
+        <RootNamespace>NoNote</RootNamespace>
+        <AssemblyName>NoNote</AssemblyName>
+        <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+        <FileAlignment>512</FileAlignment>
+        <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+        <WarningLevel>4</WarningLevel>
+        <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+        <LangVersion>11</LangVersion>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+        <PlatformTarget>AnyCPU</PlatformTarget>
+        <DebugSymbols>true</DebugSymbols>
+        <DebugType>full</DebugType>
+        <Optimize>false</Optimize>
+        <OutputPath>bin\Debug\</OutputPath>
+        <DefineConstants>DEBUG;TRACE</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+        <PlatformTarget>AnyCPU</PlatformTarget>
+        <DebugType>pdbonly</DebugType>
+        <Optimize>true</Optimize>
+        <OutputPath>bin\Release\</OutputPath>
+        <DefineConstants>TRACE</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+    </PropertyGroup>
+    <ItemGroup>
+        <Reference Include="Microsoft.CSharp" />
+        <Reference Include="Microsoft.Web.WebView2.Core, Version=1.0.2194.0, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL">
+          <HintPath>packages\Microsoft.Web.WebView2.1.0.2194-prerelease\lib\net45\Microsoft.Web.WebView2.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Microsoft.Web.WebView2.WinForms, Version=1.0.2194.0, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL">
+          <HintPath>packages\Microsoft.Web.WebView2.1.0.2194-prerelease\lib\net45\Microsoft.Web.WebView2.WinForms.dll</HintPath>
+        </Reference>
+        <Reference Include="Microsoft.Web.WebView2.Wpf, Version=1.0.2194.0, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL">
+          <HintPath>packages\Microsoft.Web.WebView2.1.0.2194-prerelease\lib\net45\Microsoft.Web.WebView2.Wpf.dll</HintPath>
+        </Reference>
+        <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+          <HintPath>packages\Newtonsoft.Json.13.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+        </Reference>
+        <Reference Include="System" />
+        <Reference Include="System.Core" />
+        <Reference Include="System.Data" />
+        <Reference Include="System.Xml" />
+        <Reference Include="System.Xaml">
+            <RequiredTargetFramework>4.0</RequiredTargetFramework>
+        </Reference>
+        <Reference Include="WindowsBase" />
+        <Reference Include="PresentationCore" />
+        <Reference Include="PresentationFramework" />
+    </ItemGroup>
+    
+    <ItemGroup>
+        <ApplicationDefinition Include="App.xaml">
+            <Generator>MSBuild:Compile</Generator>
+            <SubType>Designer</SubType>
+        </ApplicationDefinition>
+        <Compile Include="util\FileUtil.cs" />
+        <Compile Include="util\NoteWebServer.cs" />
+        <Page Include="MainWindow.xaml">
+            <Generator>MSBuild:Compile</Generator>
+            <SubType>Designer</SubType>
+        </Page>
+        <Compile Include="App.xaml.cs">
+            <DependentUpon>App.xaml</DependentUpon>
+            <SubType>Code</SubType>
+        </Compile>
+        <Compile Include="MainWindow.xaml.cs">
+            <DependentUpon>MainWindow.xaml</DependentUpon>
+            <SubType>Code</SubType>
+        </Compile>
+    </ItemGroup>
+    <ItemGroup>
+        <Compile Include="Properties\AssemblyInfo.cs">
+            <SubType>Code</SubType>
+        </Compile>
+        <Compile Include="Properties\Resources.Designer.cs">
+            <AutoGen>True</AutoGen>
+            <DesignTime>True</DesignTime>
+            <DependentUpon>Resources.resx</DependentUpon>
+        </Compile>
+        <EmbeddedResource Include="Properties\Resources.resx">
+            <Generator>ResXFileCodeGenerator</Generator>
+            <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+        </EmbeddedResource>
+    </ItemGroup>
+    <ItemGroup>
+        <None Include="App.config" />
+        <None Include="packages.config" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="assets\**">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+    </ItemGroup>
+    <ItemGroup>
+      <Content Include="assets\editor\editor.css" />
+      <Content Include="assets\editor\editor.js" />
+      <Content Include="assets\editor\editor\images\emoji\b3log.png" />
+      <Content Include="assets\editor\editor\images\emoji\chainbook.png" />
+      <Content Include="assets\editor\editor\images\emoji\doge.png" />
+      <Content Include="assets\editor\editor\images\emoji\hacpai.png" />
+      <Content Include="assets\editor\editor\images\emoji\huaji.gif" />
+      <Content Include="assets\editor\editor\images\emoji\latke.png" />
+      <Content Include="assets\editor\editor\images\emoji\lute.png" />
+      <Content Include="assets\editor\editor\images\emoji\octocat.png" />
+      <Content Include="assets\editor\editor\images\emoji\pipe.png" />
+      <Content Include="assets\editor\editor\images\emoji\solo.png" />
+      <Content Include="assets\editor\editor\images\emoji\sym.png" />
+      <Content Include="assets\editor\editor\images\emoji\trollface.png" />
+      <Content Include="assets\editor\editor\images\emoji\vditor.png" />
+      <Content Include="assets\editor\editor\images\emoji\wide.png" />
+      <Content Include="assets\editor\editor\images\logo.png" />
+      <Content Include="assets\editor\editor\index.css" />
+      <Content Include="assets\editor\editor\index.min.js" />
+      <Content Include="assets\editor\editor\js\abcjs\abcjs_basic.min.js" />
+      <Content Include="assets\editor\editor\js\echarts\echarts.min.js" />
+      <Content Include="assets\editor\editor\js\graphviz\full.render.js" />
+      <Content Include="assets\editor\editor\js\graphviz\viz.js" />
+      <Content Include="assets\editor\editor\js\highlight.js\highlight.pack.js" />
+      <Content Include="assets\editor\editor\js\highlight.js\styles\abap.css" />
+      <Content Include="assets\editor\editor\js\highlight.js\styles\algol.css" />
+      <Content Include="assets\editor\editor\js\highlight.js\styles\algol_nu.css" />
+      <Content Include="assets\editor\editor\js\highlight.js\styles\arduino.css" />
+      <Content Include="assets\editor\editor\js\highlight.js\styles\autumn.css" />
+      <Content Include="assets\editor\editor\js\highlight.js\styles\borland.css" />
+      <Content Include="assets\editor\editor\js\highlight.js\styles\bw.css" />
+      <Content Include="assets\editor\editor\js\highlight.js\styles\colorful.css" />
+      <Content Include="assets\editor\editor\js\highlight.js\styles\dracula.css" />
+      <Content Include="assets\editor\editor\js\highlight.js\styles\emacs.css" />
+      <Content Include="assets\editor\editor\js\highlight.js\styles\friendly.css" />
+      <Content Include="assets\editor\editor\js\highlight.js\styles\fruity.css" />
+      <Content Include="assets\editor\editor\js\highlight.js\styles\github.css" />
+      <Content Include="assets\editor\editor\js\highlight.js\styles\igor.css" />
+      <Content Include="assets\editor\editor\js\highlight.js\styles\lovelace.css" />
+      <Content Include="assets\editor\editor\js\highlight.js\styles\manni.css" />
+      <Content Include="assets\editor\editor\js\highlight.js\styles\monokai.css" />
+      <Content Include="assets\editor\editor\js\highlight.js\styles\monokailight.css" />
+      <Content Include="assets\editor\editor\js\highlight.js\styles\murphy.css" />
+      <Content Include="assets\editor\editor\js\highlight.js\styles\native.css" />
+      <Content Include="assets\editor\editor\js\highlight.js\styles\paraiso-dark.css" />
+      <Content Include="assets\editor\editor\js\highlight.js\styles\paraiso-light.css" />
+      <Content Include="assets\editor\editor\js\highlight.js\styles\pastie.css" />
+      <Content Include="assets\editor\editor\js\highlight.js\styles\perldoc.css" />
+      <Content Include="assets\editor\editor\js\highlight.js\styles\pygments.css" />
+      <Content Include="assets\editor\editor\js\highlight.js\styles\rainbow_dash.css" />
+      <Content Include="assets\editor\editor\js\highlight.js\styles\rrt.css" />
+      <Content Include="assets\editor\editor\js\highlight.js\styles\solarized-dark.css" />
+      <Content Include="assets\editor\editor\js\highlight.js\styles\solarized-dark256.css" />
+      <Content Include="assets\editor\editor\js\highlight.js\styles\solarized-light.css" />
+      <Content Include="assets\editor\editor\js\highlight.js\styles\swapoff.css" />
+      <Content Include="assets\editor\editor\js\highlight.js\styles\tango.css" />
+      <Content Include="assets\editor\editor\js\highlight.js\styles\trac.css" />
+      <Content Include="assets\editor\editor\js\highlight.js\styles\vim.css" />
+      <Content Include="assets\editor\editor\js\highlight.js\styles\vs.css" />
+      <Content Include="assets\editor\editor\js\highlight.js\styles\xcode.css" />
+      <Content Include="assets\editor\editor\js\katex\fonts\KaTeX_AMS-Regular.ttf" />
+      <Content Include="assets\editor\editor\js\katex\fonts\KaTeX_AMS-Regular.woff" />
+      <Content Include="assets\editor\editor\js\katex\fonts\KaTeX_AMS-Regular.woff2" />
+      <Content Include="assets\editor\editor\js\katex\fonts\KaTeX_Caligraphic-Bold.ttf" />
+      <Content Include="assets\editor\editor\js\katex\fonts\KaTeX_Caligraphic-Bold.woff" />
+      <Content Include="assets\editor\editor\js\katex\fonts\KaTeX_Caligraphic-Bold.woff2" />
+      <Content Include="assets\editor\editor\js\katex\fonts\KaTeX_Caligraphic-Regular.ttf" />
+      <Content Include="assets\editor\editor\js\katex\fonts\KaTeX_Caligraphic-Regular.woff" />
+      <Content Include="assets\editor\editor\js\katex\fonts\KaTeX_Caligraphic-Regular.woff2" />
+      <Content Include="assets\editor\editor\js\katex\fonts\KaTeX_Fraktur-Bold.ttf" />
+      <Content Include="assets\editor\editor\js\katex\fonts\KaTeX_Fraktur-Bold.woff" />
+      <Content Include="assets\editor\editor\js\katex\fonts\KaTeX_Fraktur-Bold.woff2" />
+      <Content Include="assets\editor\editor\js\katex\fonts\KaTeX_Fraktur-Regular.ttf" />
+      <Content Include="assets\editor\editor\js\katex\fonts\KaTeX_Fraktur-Regular.woff" />
+      <Content Include="assets\editor\editor\js\katex\fonts\KaTeX_Fraktur-Regular.woff2" />
+      <Content Include="assets\editor\editor\js\katex\fonts\KaTeX_Main-Bold.ttf" />
+      <Content Include="assets\editor\editor\js\katex\fonts\KaTeX_Main-Bold.woff" />
+      <Content Include="assets\editor\editor\js\katex\fonts\KaTeX_Main-Bold.woff2" />
+      <Content Include="assets\editor\editor\js\katex\fonts\KaTeX_Main-BoldItalic.ttf" />
+      <Content Include="assets\editor\editor\js\katex\fonts\KaTeX_Main-BoldItalic.woff" />
+      <Content Include="assets\editor\editor\js\katex\fonts\KaTeX_Main-BoldItalic.woff2" />
+      <Content Include="assets\editor\editor\js\katex\fonts\KaTeX_Main-Italic.ttf" />
+      <Content Include="assets\editor\editor\js\katex\fonts\KaTeX_Main-Italic.woff" />
+      <Content Include="assets\editor\editor\js\katex\fonts\KaTeX_Main-Italic.woff2" />
+      <Content Include="assets\editor\editor\js\katex\fonts\KaTeX_Main-Regular.ttf" />
+      <Content Include="assets\editor\editor\js\katex\fonts\KaTeX_Main-Regular.woff" />
+      <Content Include="assets\editor\editor\js\katex\fonts\KaTeX_Main-Regular.woff2" />
+      <Content Include="assets\editor\editor\js\katex\fonts\KaTeX_Math-BoldItalic.ttf" />
+      <Content Include="assets\editor\editor\js\katex\fonts\KaTeX_Math-BoldItalic.woff" />
+      <Content Include="assets\editor\editor\js\katex\fonts\KaTeX_Math-BoldItalic.woff2" />
+      <Content Include="assets\editor\editor\js\katex\fonts\KaTeX_Math-Italic.ttf" />
+      <Content Include="assets\editor\editor\js\katex\fonts\KaTeX_Math-Italic.woff" />
+      <Content Include="assets\editor\editor\js\katex\fonts\KaTeX_Math-Italic.woff2" />
+      <Content Include="assets\editor\editor\js\katex\fonts\KaTeX_SansSerif-Bold.ttf" />
+      <Content Include="assets\editor\editor\js\katex\fonts\KaTeX_SansSerif-Bold.woff" />
+      <Content Include="assets\editor\editor\js\katex\fonts\KaTeX_SansSerif-Bold.woff2" />
+      <Content Include="assets\editor\editor\js\katex\fonts\KaTeX_SansSerif-Italic.ttf" />
+      <Content Include="assets\editor\editor\js\katex\fonts\KaTeX_SansSerif-Italic.woff" />
+      <Content Include="assets\editor\editor\js\katex\fonts\KaTeX_SansSerif-Italic.woff2" />
+      <Content Include="assets\editor\editor\js\katex\fonts\KaTeX_SansSerif-Regular.ttf" />
+      <Content Include="assets\editor\editor\js\katex\fonts\KaTeX_SansSerif-Regular.woff" />
+      <Content Include="assets\editor\editor\js\katex\fonts\KaTeX_SansSerif-Regular.woff2" />
+      <Content Include="assets\editor\editor\js\katex\fonts\KaTeX_Script-Regular.ttf" />
+      <Content Include="assets\editor\editor\js\katex\fonts\KaTeX_Script-Regular.woff" />
+      <Content Include="assets\editor\editor\js\katex\fonts\KaTeX_Script-Regular.woff2" />
+      <Content Include="assets\editor\editor\js\katex\fonts\KaTeX_Size1-Regular.ttf" />
+      <Content Include="assets\editor\editor\js\katex\fonts\KaTeX_Size1-Regular.woff" />
+      <Content Include="assets\editor\editor\js\katex\fonts\KaTeX_Size1-Regular.woff2" />
+      <Content Include="assets\editor\editor\js\katex\fonts\KaTeX_Size2-Regular.ttf" />
+      <Content Include="assets\editor\editor\js\katex\fonts\KaTeX_Size2-Regular.woff" />
+      <Content Include="assets\editor\editor\js\katex\fonts\KaTeX_Size2-Regular.woff2" />
+      <Content Include="assets\editor\editor\js\katex\fonts\KaTeX_Size3-Regular.ttf" />
+      <Content Include="assets\editor\editor\js\katex\fonts\KaTeX_Size3-Regular.woff" />
+      <Content Include="assets\editor\editor\js\katex\fonts\KaTeX_Size3-Regular.woff2" />
+      <Content Include="assets\editor\editor\js\katex\fonts\KaTeX_Size4-Regular.ttf" />
+      <Content Include="assets\editor\editor\js\katex\fonts\KaTeX_Size4-Regular.woff" />
+      <Content Include="assets\editor\editor\js\katex\fonts\KaTeX_Size4-Regular.woff2" />
+      <Content Include="assets\editor\editor\js\katex\fonts\KaTeX_Typewriter-Regular.ttf" />
+      <Content Include="assets\editor\editor\js\katex\fonts\KaTeX_Typewriter-Regular.woff" />
+      <Content Include="assets\editor\editor\js\katex\fonts\KaTeX_Typewriter-Regular.woff2" />
+      <Content Include="assets\editor\editor\js\katex\katex.min.css" />
+      <Content Include="assets\editor\editor\js\katex\katex.min.js" />
+      <Content Include="assets\editor\editor\js\lute\lute.min.js" />
+      <Content Include="assets\editor\editor\js\mathjax\tex-svg.js" />
+      <Content Include="assets\editor\editor\js\mermaid\mermaid.min.js" />
+      <Content Include="assets\editor\editor\method.min.js" />
+    </ItemGroup>
+    <ItemGroup>
+      <TypeScriptCompile Include="assets\editor\editor\index.d.min.ts" />
+    </ItemGroup>
+    <ItemGroup>
+      <Folder Include="assets\editor\note\" />
+    </ItemGroup>
+    <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+    <Import Project="packages\Microsoft.Web.WebView2.1.0.2194-prerelease\build\Microsoft.Web.WebView2.targets" Condition="Exists('packages\Microsoft.Web.WebView2.1.0.2194-prerelease\build\Microsoft.Web.WebView2.targets')" />
+    <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+      <PropertyGroup>
+        <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105.The missing file is {0}.</ErrorText>
+      </PropertyGroup>
+      <Error Condition="!Exists('packages\Microsoft.Web.WebView2.1.0.2194-prerelease\build\Microsoft.Web.WebView2.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.Web.WebView2.1.0.2194-prerelease\build\Microsoft.Web.WebView2.targets'))" />
+    </Target>
+</Project>

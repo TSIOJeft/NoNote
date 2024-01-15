@@ -1,6 +1,0 @@
-{
-  "dependencies": {
-    "browserify-fs": "^1.0.0",
-    "vditor": "^3.9.8"
-  }
-}

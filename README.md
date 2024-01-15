@@ -1,2 +1,0 @@
-# NoNote
- Pure MarkDown Note.
