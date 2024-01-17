@@ -4,6 +4,8 @@
              xmlns:local="clr-namespace:NoNote"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
+        <FontFamily x:Key="SegoeFluentIcons">pack://application:,,,/font/#Segoe Fluent Icons</FontFamily>
+
         <Style x:Key="GradientBorderStyle" TargetType="Border">
             <Setter Property="Background">
                 <Setter.Value>
@@ -59,7 +61,7 @@
                                 Style="{StaticResource ButtonBackGroundStyle}" CornerRadius="4" BorderBrush="#212121"
                                 BorderThickness="0.5">
                             <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"
-                                              Margin="6 4 6 4" />
+                                              Margin="4 4 4 4" />
 
                         </Border>
                     </ControlTemplate>
@@ -113,27 +115,30 @@
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="{x:Type ContextMenu}">
-                        <Border BorderThickness="0.5" CornerRadius="4" x:Name="Border" Background="#fafafa">
+                        <Border BorderThickness="0.5" CornerRadius="4" x:Name="Border" Background="#fafafa"
+                                BorderBrush="#616161">
                             <StackPanel ClipToBounds="True" Orientation="Vertical" IsItemsHost="True" />
-                          
+
                         </Border>
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
         </Style>
         <Style TargetType="MenuItem">
-            <Setter Property="OverridesDefaultStyle" Value="True"/>
+            <Setter Property="OverridesDefaultStyle" Value="True" />
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="{x:Type MenuItem}">
                         <Border Margin="0 4 0 4" x:Name="Border" Background="{TemplateBinding Background}" Width="220">
-                            
-                            <TextBlock Text="{TemplateBinding Header }" Margin="16 8 8 8" Foreground="#616161"></TextBlock>
-                            
+
+                            <TextBlock Text="{TemplateBinding Header }" Margin="16 8 8 8" Foreground="#616161"
+                                       FontSize="12">
+                            </TextBlock>
+
                         </Border>
                         <ControlTemplate.Triggers>
                             <Trigger Property="IsMouseOver" Value="True">
-                                <Setter TargetName="Border" Property="Background" Value="#eeeeee"/>
+                                <Setter TargetName="Border" Property="Background" Value="#eeeeee" />
                             </Trigger>
                         </ControlTemplate.Triggers>
                     </ControlTemplate>

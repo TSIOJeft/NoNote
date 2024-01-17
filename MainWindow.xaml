@@ -26,14 +26,13 @@
             <Border CornerRadius="10">
                 <Grid>
                     <StackPanel Orientation="Horizontal">
-                        <Button x:Name="logoButton" Content="N" Style="{StaticResource GradientButtonStyle}"
+                        <Button x:Name="logoButton" Click="Logo_Button_Click" Content="N"
+                                Style="{StaticResource GradientButtonStyle}"
                                 Margin="8 6 8 6" FontWeight="Bold" Foreground="White" FontSize="8">
-
                             <Button.ContextMenu>
                                 <ContextMenu>
-                                    <MenuItem Header="设置"></MenuItem>
+                                    <MenuItem Header="工作路径" Click="Work_Folder_Item_Click"></MenuItem>
                                 </ContextMenu>
-
                             </Button.ContextMenu>
                         </Button>
                     </StackPanel>
@@ -51,14 +50,15 @@
                     </TextBlock>
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
                         <Button Click="minimize_window" Style="{StaticResource GradientButtonStyle}" Margin="8 6 2 6"
-                                FontWeight="Bold" Foreground="White" FontSize="8">
-                            -
-                        </Button>
-
+                                Foreground="White" FontSize="8" Content="&#xe921;"
+                                FontFamily="{StaticResource SegoeFluentIcons}" />
+                        <Button Click="maxmize_window" Style="{StaticResource GradientButtonStyle}" Margin="2 6 2 6"
+                                Foreground="White" FontSize="8" FontFamily="{StaticResource SegoeFluentIcons}"
+                                Content="&#xe739;" />
                         <Button Click="close_window" Style="{StaticResource GradientButtonStyle}" Margin="2 6 8 6"
-                                FontWeight="Bold" Foreground="White" FontSize="8">
-                            X
-                        </Button>
+                                Foreground="White" FontSize="8" FontFamily="{StaticResource SegoeFluentIcons}"
+                                Content="&#xe711;" />
+                      
                     </StackPanel>
                 </Grid>
             </Border>

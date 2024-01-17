@@ -6,6 +6,7 @@ using System.Net;
 using System.Net.Sockets;
 using System.Text;
 using System.Threading;
+using NoNote.config;
 
 namespace NoNote.util
 {
@@ -58,7 +59,6 @@ namespace NoNote.util
                 requestHeaders.headers.TryGetValue("Content-Length", out contentLength);
                 if (request.StartsWith("POST"))
                 {
-                    
                     SendHeaders(httpVersion, 200, "OK", contentType, contentEncoding, 0, ref stream);
                 }
                 else if (request.StartsWith("GET"))
@@ -81,15 +81,20 @@ namespace NoNote.util
         }
 
 
-     
-
         private byte[] GetContent(string requestedPath)
         {
             if (requestedPath == "/") requestedPath = "index.html";
-            string filePath = WebServerPath + '/' + requestedPath;
+            string filePath;
+            if (requestedPath.Contains("note"))
+            {
+                filePath = ConfigUtil.configArray.workFolder+requestedPath;
+            }
+            else
+            {
+                filePath = WebServerPath + '/' + requestedPath;
+            }
 
             if (!File.Exists(filePath)) return null;
-
             else
             {
                 byte[] file = System.IO.File.ReadAllBytes(filePath);
@@ -135,6 +140,5 @@ namespace NoNote.util
 
             return (headerValues, firstLine);
         }
-
     }
 }

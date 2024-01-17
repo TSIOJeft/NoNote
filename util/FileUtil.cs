@@ -7,19 +7,29 @@ namespace NoNote.util
     {
         public static string getTextFile(string filePath)
         {
-            using (StreamReader reader = new StreamReader(filePath))
+            if (File.Exists(filePath))
             {
-                // 读取整个文件内容
-                string fileContent = reader.ReadToEnd();
-                reader.Close();
-                return fileContent;
+                using (StreamReader reader = new StreamReader(filePath))
+                {
+                    // 读取整个文件内容
+                    string fileContent = reader.ReadToEnd();
+                    reader.Close();
+                    return fileContent;
+                }
             }
 
             return null;
         }
 
         public static void saveTextFile(string filePath, string content)
-        {
+        {   if(filePath==null)return;
+            string parentFolder = Path.GetDirectoryName(filePath);
+            if (parentFolder != null)
+            {
+                if (!Directory.Exists(parentFolder))
+                    Directory.CreateDirectory(parentFolder);
+            }
+
             using (StreamWriter writer = new StreamWriter(filePath))
             {
                 writer.Write(content);
@@ -38,8 +48,8 @@ namespace NoNote.util
 
             if (File.Exists(filePath))
             {
-                filePath = parentFolder + "\\" + DateTimeOffset.Now.ToUnixTimeMilliseconds() + "_"+
-                new FileInfo(filePath).Name;
+                filePath = parentFolder + "\\" + DateTimeOffset.Now.ToUnixTimeMilliseconds() + "_" +
+                           new FileInfo(filePath).Name;
                 return saveImgFile(filePath, data);
             }
 

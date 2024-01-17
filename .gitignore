@@ -1,1 +1,5 @@
-bin\
+bin
+.vs
+.idea
+*node_modules*
+obj
