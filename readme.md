@@ -2,7 +2,7 @@
 
 just pure markdown editor.
 
-one day i die in writting notes for my exam, and i used yuque and other note maker but they all are so complicated for markdown writting. and what i want is just markdown render and a edit box.
+oneday i die in writting notes for my exam, and i used yuque and other note maker but they all are so complicated for markdown writting. and what i want is just markdown render and a edit box.
 
 so i just want make a editor by myself that the ui pure for myself.
 
