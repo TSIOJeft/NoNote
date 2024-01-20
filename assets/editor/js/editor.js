@@ -1,5 +1,5 @@
 const vditor = new Vditor("vditor", {
-    preview: { maxWidth: '900' }, width: '100%', upload: {
+    preview: {maxWidth: '900'}, width: '100%', upload: {
         url: 'http://127.0.0.1:5050/upload', file(files) {
             var mfile = files[0];
             if (mfile) {
@@ -28,6 +28,10 @@ const vditor = new Vditor("vditor", {
     }, after() {
         var data = new Object();
         data.event = 0;
+        window.chrome.webview.postMessage(JSON.stringify(data));
+    }, input(value) {
+        var data = new Object();
+        data.event = 3;
         window.chrome.webview.postMessage(JSON.stringify(data));
     }
 });

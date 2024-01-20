@@ -33,5 +33,7 @@ public class ConfigUtil
     public class ConfigArray
     {
         public string workFolder = Path.Combine(myFolder, "assets\\editor");
+        public string lastFile;
+        
     }
 }

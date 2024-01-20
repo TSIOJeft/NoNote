@@ -36,18 +36,22 @@
                             </Button.ContextMenu>
                         </Button>
                     </StackPanel>
+                    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Horizontal" Margin="0 0 12 0 ">
+                        <Ellipse x:Name="notice_ellipse" Fill="#e0e0e0" Width="8" Height="8" Margin="0 0 4 0"
+                                 Stroke="#616161" Visibility="Hidden">
+                        </Ellipse>
+                        <TextBlock MouseLeftButtonDown="FileName_Title_OnMouseLeftButtonDown" Name="fileName_Title"
+                                   Style="{StaticResource titleOpacity}" Text="NoNote"
+                                   Foreground="White" FontWeight="Bold">
+                            <TextBlock.ContextMenu>
+                                <ContextMenu>
 
-                    <TextBlock MouseLeftButtonDown="FileName_Title_OnMouseLeftButtonDown" Name="fileName_Title"
-                               Style="{StaticResource titleOpacity}" HorizontalAlignment="Center" Text="NoNote"
-                               Foreground="White" FontWeight="Bold" VerticalAlignment="Center">
-                        <TextBlock.ContextMenu>
-                            <ContextMenu>
+                                </ContextMenu>
 
-                            </ContextMenu>
+                            </TextBlock.ContextMenu>
 
-                        </TextBlock.ContextMenu>
-
-                    </TextBlock>
+                        </TextBlock>
+                    </StackPanel>
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
                         <Button Click="minimize_window" Style="{StaticResource GradientButtonStyle}" Margin="8 6 2 6"
                                 Foreground="White" FontSize="8" Content="&#xe921;"
@@ -58,7 +62,7 @@
                         <Button Click="close_window" Style="{StaticResource GradientButtonStyle}" Margin="2 6 8 6"
                                 Foreground="White" FontSize="8" FontFamily="{StaticResource SegoeFluentIcons}"
                                 Content="&#xe711;" />
-                      
+
                     </StackPanel>
                 </Grid>
             </Border>

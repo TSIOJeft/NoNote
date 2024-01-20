@@ -12,24 +12,37 @@ namespace NoNote.util
 {
     public class NoteWebServer
     {
-        private static TcpListener myListener;
-        private static int port = 5050;
-        private static IPAddress localAddr = IPAddress.Parse("127.0.0.1");
+        private TcpListener myListener;
+        private int port = 5050;
+        private IPAddress localAddr = IPAddress.Parse("127.0.0.1");
         public string WebServerPath = @"WebServer";
-        private static string serverEtag = Guid.NewGuid().ToString("N");
+        private string serverEtag = Guid.NewGuid().ToString("N");
+        private Thread mainThread;
+        private bool listen;
 
         public void startListen()
         {
+            if (listen)
+            {
+                Console.WriteLine("already TCP Running");
+                return;
+            }
+
+
             myListener = new TcpListener(localAddr, port);
             myListener.Start();
             Console.WriteLine(
                 $"Web Server Running on {localAddr.ToString()} on port {port}... Press ^C to Stop...");
-            Thread th = new Thread(StartListen);
-            th.Start();
+            mainThread = new Thread(StartListen);
+            mainThread.Start();
+            listen = true;
         }
 
         public void stopListen()
         {
+            myListener.Stop();
+            mainThread.Abort();
+            listen = false;
         }
 
         private void StartListen()
@@ -87,7 +100,7 @@ namespace NoNote.util
             string filePath;
             if (requestedPath.Contains("note"))
             {
-                filePath = ConfigUtil.configArray.workFolder+requestedPath;
+                filePath = ConfigUtil.configArray.workFolder + requestedPath;
             }
             else
             {
@@ -102,7 +115,7 @@ namespace NoNote.util
             }
         }
 
-        private static void SendHeaders(string? httpVersion, int statusCode, string statusMsg, string? contentType,
+        private void SendHeaders(string? httpVersion, int statusCode, string statusMsg, string? contentType,
             string? contentEncoding,
             int byteLength, ref NetworkStream networkStream)
         {
@@ -121,7 +134,7 @@ namespace NoNote.util
             networkStream.Write(responseBytes, 0, responseBytes.Length);
         }
 
-        private static (Dictionary<string, string> headers, string requestType) ParseHeaders(string headerString)
+        private (Dictionary<string, string> headers, string requestType) ParseHeaders(string headerString)
         {
             var headerLines = headerString.Split('\r', '\n');
             string firstLine = headerLines[0];

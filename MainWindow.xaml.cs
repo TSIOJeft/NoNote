@@ -90,8 +90,7 @@ namespace NoNote
             int event_code = my_web_data["event"];
             if (event_code == 0)
             {
-                string file_path = Path.Combine(ConfigUtil.configArray.workFolder, "note", "hello.md");
-                LoadFile(file_path);
+                LoadLastFile();
             }
             else if (event_code == 1)
             {
@@ -122,6 +121,19 @@ namespace NoNote
                     insertEditorImg($"![img](http://127.0.0.1:5050/note/img/{new FileInfo(imgPath).Name})");
                 }
             }
+            else if (event_code == 3)
+            {
+                notice_ellipse.Visibility = Visibility.Visible;
+            }
+        }
+
+        private void LoadLastFile()
+        {
+            if (ConfigUtil.configArray.lastFile != null)
+            {
+                current_file_path = ConfigUtil.configArray.lastFile;
+                LoadFileTitle();
+            }
         }
 
         private void LoadFile(string filePath)
@@ -131,7 +143,14 @@ namespace NoNote
             current_file_path = filePath;
             content = System.Text.RegularExpressions.Regex.Escape(content);
             mybrowser.CoreWebView2.ExecuteScriptAsync($"ameSetValue('{content}')");
-            string fileName = Path.GetFileName(filePath);
+            ConfigUtil.configArray.lastFile = filePath;
+            new ConfigUtil().saveConfig();
+            LoadFileTitle();
+        }
+
+        private void LoadFileTitle()
+        {
+            string fileName = Path.GetFileName(current_file_path);
             if (fileName == null) return;
             fileName_Title.Text = fileName.Substring(0, fileName.LastIndexOf(".", StringComparison.Ordinal));
         }
@@ -156,8 +175,14 @@ namespace NoNote
                 string value;
                 int code;
                 result.TryGetResultAsString(out value, out code);
-                FileUtil.saveTextFile(current_file_path, value);
+                saveEditorValue(current_file_path, value);
             }
+        }
+
+        private void saveEditorValue(string filePath, string value)
+        {
+            FileUtil.saveTextFile(filePath, value);
+            notice_ellipse.Visibility = Visibility.Hidden;
         }
 
         private void MainWindow_OnMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
@@ -175,6 +200,7 @@ namespace NoNote
 
         private void close_window(object sender, RoutedEventArgs e)
         {
+            Environment.Exit(1);
             Application.Current.Shutdown();
         }
 
