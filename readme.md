@@ -14,6 +14,8 @@ local file save and oneday support cloud share...
 
 issue for bug.😘
 
+download in release.😎
+
 good day~😎
 
 ![](https://github.com/TSIOJeft/NoNote/blob/main/screenshot/1.png)
