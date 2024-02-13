@@ -9,7 +9,10 @@
         ResizeMode="CanResizeWithGrip"
         Background="Transparent"
         AllowsTransparency="True"
-        Width="1000">
+        xmlns:p="clr-namespace:NoNote.Properties"
+        Height="{Binding Source={x:Static p:Settings.Default}, Path=WindowHeight, Mode=OneWay}"
+        Width="{Binding Source={x:Static p:Settings.Default}, Path=WindowWidth, Mode=OneWay}"
+>
     <WindowChrome.WindowChrome>
         <WindowChrome GlassFrameThickness="0" CornerRadius="0" CaptionHeight="0" />
     </WindowChrome.WindowChrome>
@@ -36,7 +39,8 @@
                             </Button.ContextMenu>
                         </Button>
                     </StackPanel>
-                    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Horizontal" Margin="0 0 12 0 ">
+                    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Horizontal"
+                                Margin="0 0 12 0 ">
                         <Ellipse x:Name="notice_ellipse" Fill="#e0e0e0" Width="8" Height="8" Margin="0 0 4 0"
                                  Stroke="#616161" Visibility="Hidden">
                         </Ellipse>

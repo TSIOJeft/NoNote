@@ -25,11 +25,14 @@ namespace NoNote
     public partial class MainWindow
     {
         private string current_file_path = null;
+        private NoteWebServer noteWebServer;
 
         public MainWindow()
         {
             InitializeComponent();
             initEditor();
+            taskPanel();
+
             this.KeyDown += keyDownHandler;
         }
 
@@ -65,7 +68,7 @@ namespace NoNote
 
         public void initEditor()
         {
-            NoteWebServer noteWebServer = new NoteWebServer();
+            noteWebServer = new NoteWebServer();
             noteWebServer.WebServerPath = ConfigUtil.myFolder + "\\assets\\editor";
             noteWebServer.startListen();
             // Console.WriteLine(Path.Combine(appDir, @"assets\editor\editor.html"));
@@ -198,16 +201,6 @@ namespace NoNote
             Console.WriteLine(content);
         }
 
-        private void close_window(object sender, RoutedEventArgs e)
-        {
-            Environment.Exit(1);
-            Application.Current.Shutdown();
-        }
-
-        private void minimize_window(object sender, RoutedEventArgs e)
-        {
-            this.WindowState = WindowState.Minimized;
-        }
 
         private void addNewNote()
         {
@@ -304,6 +297,48 @@ namespace NoNote
             {
                 this.WindowState = WindowState.Normal;
             }
+        }
+
+        private void close_window(object sender, RoutedEventArgs e)
+        {
+            Properties.Settings.Default.WindowHeight = (int)this.Height;
+            Properties.Settings.Default.WindowWidth = (int)this.Width;
+            this.WindowState = WindowState.Minimized;
+            this.Hide();
+            Properties.Settings.Default.Save();
+            Properties.Settings.Default.Reload();
+        }
+
+        private void minimize_window(object sender, RoutedEventArgs e)
+        {
+            this.WindowState = WindowState.Minimized;
+        }
+
+        private void taskPanel()
+        {
+            NotifyIcon ni = new System.Windows.Forms.NotifyIcon();
+            ni.Icon = new System.Drawing.Icon(AppDomain.CurrentDomain.BaseDirectory + @"/icon/nonote.ico");
+            ni.Visible = true;
+            ni.Text = "NoNote";
+            ni.Click +=
+                (sender, args) =>
+                {
+                    this.WindowState = WindowState.Minimized;
+                    this.Show();
+                    Activate();
+                    Focus();
+                    this.WindowState = WindowState.Normal;
+                };
+
+            System.Windows.Forms.MenuItem menuExit = new System.Windows.Forms.MenuItem();
+            menuExit.Text = "退出";
+            menuExit.Click += ((sender, args) =>
+            {
+                if (noteWebServer != null) noteWebServer.stopListen();
+                Environment.Exit(Environment.ExitCode);
+            });
+            ni.ContextMenu =
+                new System.Windows.Forms.ContextMenu(new System.Windows.Forms.MenuItem[] { menuExit });
         }
     }
 }
