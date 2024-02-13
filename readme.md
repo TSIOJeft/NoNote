@@ -20,5 +20,9 @@ good day~😎
 
 ![](https://github.com/TSIOJeft/NoNote/blob/main/screenshot/1.png)
 
-# Android Version
+## Android Version
  you can see submodule in folder tree
+
+# Thanks
+[vditor](https://github.com/Vanessa219/vditor)
+[android-markdown-editor](https://github.com/csfwff/Android-Markdown-Editor)
