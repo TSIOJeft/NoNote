@@ -20,3 +20,5 @@ good day~😎
 
 ![](https://github.com/TSIOJeft/NoNote/blob/main/screenshot/1.png)
 
+# Android Version
+ you can see submodule in folder tree
