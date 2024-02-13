@@ -1,0 +1,3 @@
+[submodule "NoNote_Android"]
+	path = NoNote_Android
+	url = https://github.com/TSIOJeft/NoNote_Android.git
